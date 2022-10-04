@@ -7,3 +7,7 @@
 *.webp binary
 *.bmp binary
 *.ico binary
+
+# Batch can be funky with LF. Keep it CRLF
+*.cmd text eol=crlf
+*.bat text eol=crlf
