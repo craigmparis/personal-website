@@ -1,7 +1,8 @@
 # personal-website
-A personal website designed to be used as a portfolio.
+A personal website designed to be used as a test environment and portfolio. This is all guaranteed to be overkill for the simple website it builds and deploys.
 
-
+# Dependencies
+- bazel: https://github.com/bazelbuild/bazel/releases/tag/5.3.1
 
 This repository uses Arlo's commit notation for standardized commit notation
 More information: https://github.com/RefactoringCombos/ArlosCommitNotation
