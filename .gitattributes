@@ -1,1 +1,9 @@
+# Always use POSIX line endings on text files
 * text eol=lf
+
+# Do not change line endings on binary files (seems to be a bug in Git)
+*.png binary
+*.jpg binary
+*.webp binary
+*.bmp binary
+*.ico binary
