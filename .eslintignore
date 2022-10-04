@@ -1,6 +1,5 @@
-# Compiled fil
+# Compiled files don't need to be checked
 build
-tsconfig.json
 node_modules
 bazel
 bazel-bin
