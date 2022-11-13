@@ -5,7 +5,7 @@ runs:
   steps:
     - name: Get Versions
       shell: bash
-      run: cat .versions >> $GITHUB_ENV
+      run: cat VERSIONS.env >> $GITHUB_ENV
 
     - name: Setup node
       uses: actions/setup-node@v3
