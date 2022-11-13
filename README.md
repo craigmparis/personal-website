@@ -1,6 +1,6 @@
 # personal-website
 
-A personal website designed to be used as a test environment and portfolio. This is all guaranteed to be overkill for the simple website it builds and deploys.
+A personal site designed to be used as a test environment and portfolio. This is all guaranteed to be overkill for the simple site it builds and deploys.
 
 ## Dependencies
 

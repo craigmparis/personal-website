@@ -2,5 +2,5 @@
 set -euo pipefail
 
 pnpm i
-pnpm run test
+pnpm run test --watchAll=false
 source tools/lint.sh
