@@ -1,8 +1,6 @@
 {
   "yaml.schemas": {
-    ".vscode/yaml_schemas/github-workflow.json": [
-      ".github/workflows/*",
-    ],
+    ".vscode/yaml_schemas/github-workflow.json": [".github/workflows/*"],
     ".vscode/yaml_schemas/github-action.json": [
       ".github/actions/dependencies/action.yml"
     ]
