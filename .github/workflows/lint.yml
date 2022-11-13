@@ -6,12 +6,15 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
       - uses: actions/checkout@v3
 
       - name: Setup Dependencies
         uses: ./.github/actions/dependencies
 
+      - name: Add Superlint Configuration Variables
       - run: cat .github/super-linter.env >> "$GITHUB_ENV"
+
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
