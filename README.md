@@ -1,7 +1,9 @@
 # personal-website
+
 A personal website designed to be used as a test environment and portfolio. This is all guaranteed to be overkill for the simple website it builds and deploys.
 
 # Dependencies
+
 - bazel: https://github.com/bazelbuild/bazel/releases/tag/5.3.1
 - Git: https://git-scm.com/downloads
 

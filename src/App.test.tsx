@@ -2,13 +2,13 @@ import { render, screen } from "@testing-library/react";
 import App from "./App";
 
 test("renders without crashing", () => {
-	render(<App />);
+  render(<App />);
 });
 
 test("A navigation header is displayed", () => {
-	render(<App />);
+  render(<App />);
 
-	const navigation = screen.getByRole("navigation");
+  const navigation = screen.getByRole("navigation");
 
-	expect(navigation).toBeVisible();
+  expect(navigation).toBeVisible();
 });
