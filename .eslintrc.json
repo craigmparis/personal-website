@@ -19,11 +19,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "prettier"
-  ],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
@@ -37,13 +33,9 @@
   },
   "overrides": [
     {
-      "files": [
-        "*.md"
-      ],
+      "files": ["*.md"],
       "parser": "eslint-plugin-markdownlint/parser",
-      "extends": [
-        "plugin:markdownlint/recommended"
-      ]
+      "extends": ["plugin:markdownlint/recommended"]
     }
   ]
 }
