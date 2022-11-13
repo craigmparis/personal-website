@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setup Dependencies
+        uses: ./.github/actions/dependencies
+
       - run: cat .github/super-linter.env >> "$GITHUB_ENV"
       - name: Lint Code Base
         uses: github/super-linter@v4
