@@ -36,8 +36,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+      - name: Install React Dependencies
+        shell: bash
+        run: pnpm install
+
       - name: Build
         shell: bash
-        run: |
-          pnpm install
-          pnpm run build
+        run: pnpm run build
