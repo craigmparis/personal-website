@@ -5,7 +5,12 @@
     "es2021": true,
     "jest": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -14,7 +19,11 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier"
+  ],
   "rules": {
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
@@ -25,5 +34,16 @@
     "react": {
       "version": "detect"
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.md"
+      ],
+      "parser": "eslint-plugin-markdownlint/parser",
+      "extends": [
+        "plugin:markdownlint/recommended"
+      ]
+    }
+  ]
 }
