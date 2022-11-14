@@ -13,5 +13,8 @@
       "fileMatch": [".markdownlint.jsonc"],
       "url": ".vscode/schemas/markdownlint-config-schema.json"
     }
-  ]
+  ],
+  "files.associations": {
+    ".editorconfig": "Ini"
+  }
 }
