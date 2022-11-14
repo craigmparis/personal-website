@@ -47,23 +47,15 @@
       }
     },
     {
-      "files": ["*.json"],
+      "extends": ["plugin:jsonc/all", "prettier"],
+      "files": ["*.json", "*.json5", "*.jsonc", ".prettierrc"],
+      "parser": "jsonc-eslint-parser",
       "rules": {
-        "no-unused-expressions": "off",
-        "no-template-curly-in-string": "off"
-      }
-    },
-    {
-      "files": [
-        ".eslintrc.json",
-        "package.json",
-        "manifest.json",
-        "tsconfig.json",
-        ".jscpd.json",
-        ".vscode/schemas/*"
-      ],
-      "rules": {
-        "sort-keys": "off"
+        "jsonc/array-element-newline": "off",
+        "jsonc/indent": "off",
+        "jsonc/key-name-casing": "off",
+        "jsonc/object-curly-spacing": "off",
+        "jsonc/sort-keys": "off"
       }
     }
   ]
