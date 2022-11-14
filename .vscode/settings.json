@@ -12,6 +12,10 @@
     {
       "fileMatch": [".markdownlint.jsonc"],
       "url": ".vscode/schemas/markdownlint-config-schema.json"
+    },
+    {
+      "fileMatch": [".jscpd.json"],
+      "url": ".vscode/schemas/jscpd.json"
     }
   ],
   "files.associations": {
