@@ -18,6 +18,7 @@
   "rules": {
     "func-style": "off",
     "camelcase": "error",
+    "max-lines": "off",
     "no-duplicate-imports": "error",
     "sort-imports": "off",
     "no-void": "off",
@@ -43,6 +44,26 @@
         "@typescript-eslint/naming-convention": "off",
         "@typescript-eslint/space-before-function-paren": "off",
         "@typescript-eslint/prefer-readonly-parameter-types": "off"
+      }
+    },
+    {
+      "files": ["*.json"],
+      "rules": {
+        "no-unused-expressions": "off",
+        "no-template-curly-in-string": "off"
+      }
+    },
+    {
+      "files": [
+        ".eslintrc.json",
+        "package.json",
+        "manifest.json",
+        "tsconfig.json",
+        ".jscpd.json",
+        ".vscode/schemas/*"
+      ],
+      "rules": {
+        "sort-keys": "off"
       }
     }
   ]

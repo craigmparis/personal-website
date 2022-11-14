@@ -1,8 +1,11 @@
 {
-  "yaml.schemas": {
-    ".vscode/schemas/github-workflow.json": [".github/workflows/*"],
-    ".vscode/schemas/github-action.json": [".github/actions/**/action.yml"],
-    ".vscode/schemas/markdownlint-config-schema.json": [".markdownlint.yaml"]
+  "eslint.alwaysShowStatus": true,
+  "eslint.onIgnoredFiles": "warn",
+  "eslint.packageManager": "pnpm",
+  "eslint.trace.server": "verbose",
+  "eslint.validate": ["javascript", "typescript", "json"],
+  "files.associations": {
+    ".editorconfig": "Ini"
   },
   "json.schemas": [
     {
@@ -18,7 +21,9 @@
       "url": ".vscode/schemas/jscpd.json"
     }
   ],
-  "files.associations": {
-    ".editorconfig": "Ini"
+  "yaml.schemas": {
+    ".vscode/schemas/github-action.json": [".github/actions/**/action.yml"],
+    ".vscode/schemas/github-workflow.json": [".github/workflows/*"],
+    ".vscode/schemas/markdownlint-config-schema.json": [".markdownlint.yaml"]
   }
 }
