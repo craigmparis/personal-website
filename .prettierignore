@@ -1,2 +1,5 @@
 # Prettier doesn't like pnpms lockfile format
 pnpm-lock.yaml
+
+# Ignore bootstrapped dependencies
+tools/.*

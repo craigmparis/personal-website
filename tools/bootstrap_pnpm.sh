@@ -2,7 +2,7 @@
 set -euo pipefail
 
 source VERSIONS.env
-parent_folder=$(realpath "tools/pnpm")
+parent_folder=$(realpath "tools/.pnpm")
 destination_folder="${parent_folder}/pnpm-v${PNPM_VERSION}"
 pnpm="${destination_folder}/pnpm"
 pnpm_tgz="${destination_folder}/linux-x64-${PNPM_VERSION}.tgz"

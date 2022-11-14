@@ -2,7 +2,7 @@
 set -euo pipefail
 
 source VERSIONS.env
-parent_folder=$(realpath "tools/node")
+parent_folder=$(realpath "tools/.node")
 destination_folder="${parent_folder}/node-v${NODE_VERSION}-linux-x64"
 node_bin=${destination_folder}/bin
 node="${node_bin}/node"

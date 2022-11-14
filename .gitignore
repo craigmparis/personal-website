@@ -160,5 +160,4 @@ override.tf.json
 terraform.rc
 
 # Our bootstrapped toolpaths
-tools/node
-tools/pnpm
+tools/.*
