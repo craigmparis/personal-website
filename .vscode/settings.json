@@ -5,7 +5,8 @@
   "eslint.trace.server": "verbose",
   "eslint.validate": ["javascript", "typescript", "json"],
   "files.associations": {
-    ".editorconfig": "Ini"
+    ".editorconfig": "Ini",
+    ".prettierignore": "Ignore"
   },
   "json.schemas": [
     {
