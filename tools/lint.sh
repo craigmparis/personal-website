@@ -6,3 +6,6 @@ npx textlint "**/*"
 npx eslint .
 npx markdownlint-cli2 "**/*.md" "#node_modules"
 npx jscpd .
+
+terraform -chdir=infrastructure fmt -check
+tflint infrastructure
