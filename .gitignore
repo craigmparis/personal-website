@@ -161,3 +161,4 @@ terraform.rc
 
 # Our bootstrapped toolpaths
 tools/node
+tools/pnpm
