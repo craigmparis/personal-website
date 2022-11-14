@@ -1,0 +1,8 @@
+{
+  "MD029": {
+    "style": "ordered"
+  },
+  // MD043/required-headings/required-headers - Required heading structure
+  // I don't know what this does so I'm going to disable it for now
+  "MD043": false
+}

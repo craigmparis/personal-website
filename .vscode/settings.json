@@ -1,8 +1,17 @@
 {
   "yaml.schemas": {
-    ".vscode/yaml_schemas/github-workflow.json": [".github/workflows/*"],
-    ".vscode/yaml_schemas/github-action.json": [
-      ".github/actions/dependencies/action.yml"
-    ]
-  }
+    ".vscode/schemas/github-workflow.json": [".github/workflows/*"],
+    ".vscode/schemas/github-action.json": [".github/actions/**/action.yml"],
+    ".vscode/schemas/markdownlint-config-schema.json": [".markdownlint.yaml"]
+  },
+  "json.schemas": [
+    {
+      "fileMatch": [".prettierrc"],
+      "url": ".vscode/schemas/prettierrc.json"
+    },
+    {
+      "fileMatch": [".markdownlint.jsonc"],
+      "url": ".vscode/schemas/markdownlint-config-schema.json"
+    }
+  ]
 }

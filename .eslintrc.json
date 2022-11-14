@@ -5,12 +5,7 @@
     "es2021": true,
     "jest": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
-  ],
+  "extends": ["eslint:all", "plugin:react/all", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -21,10 +16,14 @@
   },
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
+    "func-style": "off",
+    "camelcase": "error",
+    "no-duplicate-imports": "error",
+    "sort-imports": "off",
+    "no-void": "off",
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
-    "camelcase": "error",
-    "no-duplicate-imports": "error"
+    "react/jsx-filename-extension": "off"
   },
   "settings": {
     "react": {
@@ -33,9 +32,18 @@
   },
   "overrides": [
     {
-      "files": ["*.md"],
-      "parser": "eslint-plugin-markdownlint/parser",
-      "extends": ["plugin:markdownlint/recommended"]
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@typescript-eslint/all"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      },
+      "rules": {
+        "@typescript-eslint/object-curly-spacing": "off",
+        "@typescript-eslint/indent": "off",
+        "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/space-before-function-paren": "off",
+        "@typescript-eslint/prefer-readonly-parameter-types": "off"
+      }
     }
   ]
 }
