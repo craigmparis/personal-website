@@ -17,7 +17,10 @@ if [[ ! -f "${node}" ]]; then
   rm "${npm}"
 fi
 
-$node --version
+$node --version > /dev/null 2>&1
 
 export node=$node
-export PATH="${node_bin}:${PATH}"
+
+if [[ ! ":$PATH:" == *":${node_bin}:"* ]]; then
+  export PATH="${node_bin}:${PATH}"
+fi

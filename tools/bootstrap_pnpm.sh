@@ -15,7 +15,10 @@ if [[ ! -f "${pnpm}" ]]; then
   rm "${pnpm_tgz}"
 fi
 
-$pnpm --version
+$pnpm --version > /dev/null 2>&1
 
 export pnpm=$pnpm
-export PATH="${destination_folder}:${PATH}"
+
+if [[ ! ":$PATH:" == *":${destination_folder}:"* ]]; then
+  export PATH="${destination_folder}:${PATH}"
+fi
