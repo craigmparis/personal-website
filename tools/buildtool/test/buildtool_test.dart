@@ -4,28 +4,65 @@ import 'package:test/test.dart';
 import 'dart:io';
 
 void main() {
-  final dartSDKLocation = Uri.parse(
-      "https://storage.googleapis.com/dart-archive/channels/stable/release/2.18.4/sdk/dartsdk-linux-arm64-release.zip");
-  final tempDir = Directory.systemTemp.createTempSync();
-  late final File archive;
-  late final Directory inflatedArchive;
+  late final Directory tempDir;
 
-  setUpAll((() async {
-    archive = await downloadFile(dartSDKLocation, tempDir);
-    inflatedArchive = extractArchive(archive);
+  setUpAll(() async {
+    tempDir = await Directory.systemTemp.createTemp();
+  });
+
+  tearDownAll(() async {
+    await tempDir.delete(recursive: true);
+  });
+
+  group('Dart SDK', (() {
+    const dartVersion = "2.18.4";
+    const zipFile = "dartsdk-linux-x64-release.zip";
+    final dartSDKLocation = Uri.parse(
+        "https://storage.googleapis.com/dart-archive/channels/stable/release/$dartVersion/sdk/$zipFile");
+    late final File executable;
+
+    setUpAll(() async {
+      executable = await bootstrapExecutable(
+          dartSDKLocation, tempDir, p.join('dart-sdk', 'bin', 'dart'));
+    });
+
+    test('Can bootstrap and run the dart executable', () async {
+      var result = await Process.run(executable.path, ['--version']);
+      expect(
+        result.stdout.trim(),
+        'Dart SDK version: 2.18.4 (stable) (Tue Nov 1 15:15:07 2022 +0000) on "linux_x64"',
+        reason: result.stderr.toString(),
+      );
+    });
+
+    test('Deletes the archive', () async {
+      expect(await File(p.join(tempDir.path, zipFile)).exists(), false);
+    });
   }));
 
-  test('Can download the Dart SDK', () async {
-    expect(await archive.exists(), true);
-  });
+  group('Nodejs', (() {
+    const nodeJsVersion = "16.18.0";
+    const xzFile = "node-v$nodeJsVersion-linux-x64.tar.xz";
+    final nodeJsUrl =
+        Uri.parse("https://nodejs.org/dist/v$nodeJsVersion/$xzFile");
+    late final File executable;
 
-  test('Can extract a zip file', () async {
-    expect(await inflatedArchive.exists(), true);
-  });
+    setUpAll(() async {
+      executable =
+          await bootstrapExecutable(nodeJsUrl, tempDir, p.join('bin', 'node'));
+    });
 
-  test('Can locate the dart executable', () async {
-    var dartExePath =
-        File(p.join(inflatedArchive.path, 'dart-sdk', 'bin', 'dart'));
-    expect(await dartExePath.exists(), true);
-  });
+    test('Can bootstrap and run the NodeJS executable', () async {
+      var result = await Process.run(executable.path, ['--version']);
+      expect(
+        result.stdout.trim(),
+        'Dart SDK version: 2.18.4 (stable) (Tue Nov 1 15:15:07 2022 +0000) on "linux_x64"',
+        reason: result.stderr.toString(),
+      );
+    });
+
+    test('Deletes the archive', () async {
+      expect(await File(p.join(tempDir.path, xzFile)).exists(), false);
+    });
+  }));
 }
