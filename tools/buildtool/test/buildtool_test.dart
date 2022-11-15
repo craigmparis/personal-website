@@ -1,5 +1,5 @@
-import 'package:archive/archive_io.dart';
 import 'package:buildtool/buildtool.dart';
+import 'package:path/path.dart' as p;
 import 'package:test/test.dart';
 import 'dart:io';
 
@@ -21,5 +21,11 @@ void main() {
 
   test('Can extract a zip file', () async {
     expect(await inflatedArchive.exists(), true);
+  });
+
+  test('Can locate the dart executable', () async {
+    var dartExePath =
+        File(p.join(inflatedArchive.path, 'dart-sdk', 'bin', 'dart'));
+    expect(await dartExePath.exists(), true);
   });
 }
