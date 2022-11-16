@@ -3,3 +3,6 @@ pnpm-lock.yaml
 
 # Ignore bootstrapped dependencies
 tools/.*
+
+# Ignore generated files
+**/build

@@ -1,3 +1,15 @@
+# Allow linting of dotfiles
 !.*
 
+# Ignore our bootstrapped dependencies
 tools/.*
+
+# Ignore output folders from typescript compilation
+**/build
+
+# Ignore node_modules everywhere
+**/node_modules
+
+# Ignore eslint config files
+.eslintrc.js
+**/.eslintrc.js

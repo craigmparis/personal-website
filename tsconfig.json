@@ -17,6 +17,5 @@
     "jsx": "react-jsx",
     "removeComments": true,
     "pretty": true
-  },
-  "include": ["src/**/*"]
+  }
 }
