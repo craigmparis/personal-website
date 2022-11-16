@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable"],
-    "module": "esnext"
+    "module": "esnext",
+    "jsx": "react-jsx"
   },
   "extends": "../tsconfig.json",
   "include": ["src/**/*"]
