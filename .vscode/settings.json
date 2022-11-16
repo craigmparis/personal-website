@@ -1,9 +1,22 @@
 {
+  "terminal.integrated.env.linux": {
+    "NODE_BIN": "tools/.node/node-v*-linux-x64/bin",
+    "PNPM_BIN": "tools/.pnpm/pnpm-v*",
+    "PATH": "${env:NODE_BIN}:${env:PNPM_BIN}:${env:PATH}"
+  },
   "eslint.alwaysShowStatus": true,
   "eslint.onIgnoredFiles": "warn",
   "eslint.packageManager": "pnpm",
+  "eslint.runtime": "tools/.node/node-v16.18.0-linux-x64/bin/node",
   "eslint.trace.server": "verbose",
-  "eslint.validate": ["javascript", "typescript", "json"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json"
+  ],
+  "eslint.workingDirectories": [".", "./frontend", "./buildtool"],
   "files.associations": {
     ".editorconfig": "Ini",
     ".prettierignore": "Ignore"
@@ -20,11 +33,16 @@
     {
       "fileMatch": [".jscpd.json"],
       "url": ".vscode/schemas/jscpd.json"
+    },
+    {
+      "fileMatch": ["*tsconfig.json"],
+      "url": ".vscode/schemas/typescript-config.json"
     }
   ],
   "yaml.schemas": {
     ".vscode/schemas/github-action.json": [".github/actions/**/action.yml"],
     ".vscode/schemas/github-workflow.json": [".github/workflows/*"],
     ".vscode/schemas/markdownlint-config-schema.json": [".markdownlint.yaml"]
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
