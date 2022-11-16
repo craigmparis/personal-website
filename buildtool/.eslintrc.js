@@ -4,15 +4,11 @@ module.exports = {
   overrides: [
     {
       files: ["*.ts"],
-      env: {
-        es2021: true,
-        jest: true,
-      },
       extends: ["plugin:@typescript-eslint/all", "eslint:all", "prettier"],
       parserOptions: {
         tsconfigRootDir: __dirname,
         project: ["tsconfig.json"],
-        ecmaVersion: "latest",
+        ecmaVersion: "2020",
         sourceType: "module",
       },
       rules: {

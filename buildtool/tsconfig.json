@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "module": "nodenext"
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "outDir": "build"
   },
   "extends": "../tsconfig.json",
   "include": ["src/**/*"]

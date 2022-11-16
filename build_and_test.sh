@@ -11,6 +11,7 @@ popd
 
 pushd buildtool
 npx tsc
+pnpm run test
 popd
 
 source tools/lint.sh

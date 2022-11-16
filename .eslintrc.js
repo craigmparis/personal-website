@@ -2,6 +2,8 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    es6: true,
+    jest: true
   },
   extends: ["eslint:all", "prettier"],
   plugins: ["prettier", "jsonc"],
