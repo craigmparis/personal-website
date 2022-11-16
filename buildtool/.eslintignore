@@ -1,0 +1,5 @@
+# Generated folders
+build
+
+# Configuration files
+.eslintrc.js
