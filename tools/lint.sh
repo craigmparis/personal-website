@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+source ./tools/bootstrap.sh
+
 npx prettier --check .
 npx textlint "**/*"
 npx eslint .
