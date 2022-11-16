@@ -7,7 +7,6 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "nodenext",
-    "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
     "removeComments": true,
