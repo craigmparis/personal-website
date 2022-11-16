@@ -1,4 +1,7 @@
 {
+  "compilerOptions": {
+    "module": "nodenext"
+  },
   "extends": "../tsconfig.json",
   "include": ["src/**/*"]
 }
